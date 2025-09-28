@@ -19,9 +19,8 @@ function ResultadoPage() {
   }
 
   const { respostas, questoes } = location.state;
-  const idSimulado = questoes[0]?.vestibular.toLowerCase(); // ex: 'unicamp'
+  const idSimulado = questoes[0]?.vestibular.toLowerCase();
 
-  // Calcula o número de acertos
   const acertos = questoes.reduce((total, questao) => {
     if (respostas[questao.id] === questao.respostaCorreta) {
       return total + 1;
